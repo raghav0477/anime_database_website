@@ -19,7 +19,7 @@ function MainContent(props) {
         {/* {props.animeList} */}
         {props.animeList.map((anime) => (
           <div className="anime-card">
-            <p>{anime.title}</p>
+            {/* <p>{anime.title}</p> */}
             <a href={anime.url} target="_blank" rel="noreferrer">
               <figure>
                 <img src={anime.images.jpg.image_url} alt="ima" />
