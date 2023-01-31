@@ -16,6 +16,10 @@ h1 {
   font-weight: 400;
   text-align: center;
 }
+.App{
+  width: 80vw;
+  margin: 0 auto;
+}
 strong {
   color: #313131;
 }
@@ -55,89 +59,191 @@ nav a {
   color: #aaa;
 }
 .content-wrap main {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 0%;
-    flex: 1 1 0%;
-    padding: 0px 16px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 0%;
+  flex: 1 1 0%;
+  padding: 0px 16px;
+}
+.content-wrap main .main-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+}
+.content-wrap main .main-head .search-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 20rem;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 0%;
+  flex: 1 1 0%;
+}
+.content-wrap main .main-head .search-bar input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  padding: 16px;
+  border-radius: 999px;
+  background-color: #eee;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.name {
+  overflow: hidden;
+  text-align: center;
+}
+.content-wrap main .anime-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  justify-items: center;
+  margin-top: 32px;
+  margin: 32px -8px 0px;
+}
+.content-wrap main .anime-list .anime-card {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 33.333%;
+  flex: 1 1 33.333%;
+  max-width: 72.333%;
+  justify-content: center;
+  display: flex;
+  padding: 16px 8px;
+}
+.content-wrap main .anime-list .anime-card a {
+  text-decoration: none;
+}
+.content-wrap main .anime-list .anime-card figure {
+  display: block;
+  margin-bottom: 16px;
+}
+.content-wrap main .anime-list .anime-card figure img {
+  display: block;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 16px;
+  -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.15);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.content-wrap main .anime-list .anime-card h3 {
+  color: #313131;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.content-wrap main .anime-list .anime-card:hover figure img {
+  -webkit-box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 480px){
+  header{
+    padding-bottom: 0;
   }
-  .content-wrap main .main-head {
-    display: -webkit-box;
-    display: -ms-flexbox;
+  h1{
+    font-size: 40px;
+  }
+  aside{
+    margin-left: 0;
+    margin: 0;
+    padding-right: 0;
+  }
+  .content-wrap{
     display: flex;
-    /* -webkit-box-pack: end;
-    -ms-flex-pack: end; */
+    flex-direction: column;
     justify-content: center;
   }
-  .content-wrap main .main-head .search-bar {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-left: 20rem;
-    /* -webkit-box-pack: end;
-    -ms-flex-pack: end;*/
-    /* justify-content: center;  */
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 0%;
-    flex: 1 1 0%;
+  .top-list{
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    width: 80vw;
+    height: auto;
+    min-height: 200px;
+    
   }
-  .content-wrap main .main-head .search-bar input {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background: none;
-    outline: none;
-    border: none;
-    display: block;
-    width: 100%;
-    max-width: 400px;
-    padding: 16px;
-    border-radius: 999px;
-    background-color: #eee;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
+  .top-list a{
+    width: 100px;
+    font-size: 10px;
+    -webkit-flex: 40% 1;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
 
-  .content-wrap main .anime-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
+.content-wrap main .main-head .search-bar{
+    margin-left: 0rem;
+  }
+  .content-wrap main .anime-list{
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+.content-wrap main .anime-list .anime-card{
+  max-width: 100%;
+}
+}
+@media screen and (max-width: 720px){
+  header{
+    padding-bottom: 0;
+  }
+  h1{
+    font-size: 40px;
+  }
+  aside{
+    margin-left: 0;
+    margin: 0;
+    padding-right: 0;
+  }
+  .content-wrap{
     display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-top: 32px;
-    margin: 32px -8px 0px;
+    flex-direction: column;
+    justify-content: center;
   }
-  .content-wrap main .anime-list .anime-card {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 33.333%;
-    flex: 1 1 33.333%;
-    max-width: 33.333%;
-    padding: 16px 8px;
+  .top-list{
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    width: 80vw;
+    height: auto;
+    gap: 10px;
+    min-height: 200px;
+    
   }
-  .content-wrap main .anime-list .anime-card a {
-    text-decoration: none;
+  .top-list a{
+    width: 100px;
+    font-size: 15px;
+    -webkit-flex: 40% 1;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
   }
-  .content-wrap main .anime-list .anime-card figure {
-    display: block;
-    margin-bottom: 16px;
+
+.content-wrap main .main-head .search-bar{
+    margin-left: 0rem;
   }
-  .content-wrap main .anime-list .anime-card figure img {
-    display: block;
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 16px;
-    -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.15);
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
+  .content-wrap main .anime-list{
+    grid-template-columns: repeat(1, 1fr);
   }
-  .content-wrap main .anime-list .anime-card h3 {
-    color: #313131;
-  }
-  .content-wrap main .anime-list .anime-card:hover figure img {
-    -webkit-box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
-  }
-  
+
+.content-wrap main .anime-list .anime-card{
+  max-width: 100%;
+}
+}

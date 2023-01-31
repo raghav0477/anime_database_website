@@ -24,7 +24,7 @@ function MainContent(props) {
               <figure>
                 <img src={anime.images.jpg.image_url} alt="ima" />
               </figure>
-              <h3>{anime.title}</h3>
+              <div className="name"><h3>{anime.title}</h3></div>
             </a>
           </div>
         ))}

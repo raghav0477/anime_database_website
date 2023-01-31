@@ -5,6 +5,7 @@ const Sidebar = ({ topAnime }) => {
     <aside>
         <nav>
             <h3>Top Anime</h3>
+            <div className="top-list">
             { topAnime.map(anime=>(
               <a href={anime.url}
               target="_blank"
@@ -13,6 +14,7 @@ const Sidebar = ({ topAnime }) => {
                 {anime.title}
               </a>
             ))}
+            </div>
             
         </nav>
     </aside>
