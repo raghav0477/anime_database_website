@@ -169,7 +169,9 @@ nav a {
   }
   .top-list{
     display: -webkit-flex;
+    flex-direction: row;
     -webkit-flex-direction: row;
+    flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
     width: 80vw;
     height: auto;
@@ -180,6 +182,7 @@ nav a {
     width: 100px;
     font-size: 10px;
     -webkit-flex: 40% 1;
+    flex: 40% 1;
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -216,7 +219,9 @@ nav a {
   }
   .top-list{
     display: -webkit-flex;
+    flex-direction: row;
     -webkit-flex-direction: row;
+    flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
     width: 80vw;
     height: auto;
@@ -227,6 +232,7 @@ nav a {
   .top-list a{
     width: 100px;
     font-size: 15px;
+    flex: 40% 1;
     -webkit-flex: 40% 1;
     padding: 20px;
     text-align: center;
